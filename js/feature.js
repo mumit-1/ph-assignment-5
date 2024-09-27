@@ -1,11 +1,17 @@
+getId('blog-btn').addEventListener('click',function(){
+    getWhatYouWant('blog');
+    getId('donation-btn').classList.remove('bg-[#B4F461]');
+    getId('history-btn').classList.remove('bg-[#B4F461]');
+})
 getId('donation-btn').addEventListener('click',function(){
     getWhatYouWant('donation')
-})
-getId('blog-btn').addEventListener('click',function(){
-    getWhatYouWant('blog')
+    getId('history-btn').classList.remove('bg-[#B4F461]')
+    getId('donation-btn').classList.add('bg-[#B4F461]','hover:bg-[#B4F461]')
 })
 getId('history-btn').addEventListener('click',function(){
     getWhatYouWant('history')
+    getId('history-btn').classList.add('bg-[#B4F461]','hover:bg-[#B4F461]')
+    getId('donation-btn').classList.remove('bg-[#B4F461]')
 })
 
 function getWhatYouWant (id){
@@ -19,3 +25,4 @@ function getWhatYouWant (id){
 
     getId(id).classList.remove('hidden')
 }
+

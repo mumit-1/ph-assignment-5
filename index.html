@@ -21,11 +21,11 @@
 
 <body>
     <header>
-        <div class=" w-full fixed bg-fixed z-10">
-            <div class="flex justify-around  items-center bg-[#F9F7F3] py-5">
+        <div class=" w-full fixed bg-fixed z-10 backdrop-blur-md border-b">
+            <div class="flex justify-around  items-center bg-yellow-100/50 py-5 px-2">
 
                 <div>
-                    <button id="blog-btn" class="btn bg-[#B4F461] hover:bg-green-400 border-0  lg:text-lg">Blog</button>
+                    <button id="blog-btn" class="btn bg-[#B4F461] hover:bg-green-400 border-0  lg:text-lg  drop-shadow">Blog</button>
                 </div>
 
                 <div class=" flex justify-evenly items-center">
@@ -36,19 +36,19 @@
 
                 <div class="flex items-center">
                     <div class=""><img class="lg:w-4/5 w-9/12" src="assets/coin.png" alt=""></div>
-                    <p class="text-lg font-semibold"><span id="balance">5500</span> BDT</p>
+                    <p class="text-lg font-semibold"><span id="balance">9500</span> BDT</p>
                 </div>
             </div>
-            <div class="flex justify-center items-center gap-5 py-5 bg-base-100">
-                <button id="donation-btn" class="btn">Donation</button>
-                <button id="history-btn" class="btn">History</button>
+            <div class="flex justify-center items-center gap-9 py-3 bg-stone-100/50 ">
+                <button id="donation-btn" class="btn bg-[#B4F461] border-0 drop-shadow lg:w-1/12 w-1/4">Donation</button>
+                <button id="history-btn" class="btn border-0 drop-shadow lg:w-1/12 w-1/4">History</button>
             </div>
         </div>
     </header>
     <main>
         <section>
-            <div id="donation" class="pt-44 ">
-                <div class="hero bg-base-200">
+            <div id="donation" class="pt-40 ">
+                <div class="hero">
                     <div
                         class="hero-content flex-col lg:flex-row gap-8 border bg-white rounded-2xl mt-5 w-11/12 lg:p-8 p-5">
                         <div class="w-full">
@@ -67,11 +67,11 @@
                                 supporting the relief efforts and making a positive impact on the lives of those in
                                 need.
                             </p>
-                            <input type="text" placeholder="Write Donation Amount"
+                            <input id="input-first" type="text" placeholder="Write Donation Amount"
                                 class="input w-full mb-4 rounded-xl border-gray-400" />
                             <!-- Open the modal using ID.showModal() method -->
-                            <button class="btn btn-success bg-[#B4F461] hover:bg-green-400 border-0 w-full text-lg"
-                                onclick="my_modal_52.showModal()">Donate Now</button>
+                            <button id="donate-one" class="btn btn-success bg-[#B4F461] hover:bg-green-400 border-0 w-full text-lg"
+                                >Donate Now</button>
                             <dialog id="my_modal_52" class="modal modal-bottom sm:modal-middle">
                                 <div class="modal-box">
                                     <h3 class="text-4xl font-bold text-center">Congrats!</h3>
@@ -92,7 +92,7 @@
 
                 <!-- second -->
 
-                <div class="hero bg-base-200">
+                <div class="hero">
                     <div
                         class="hero-content flex-col lg:flex-row gap-8 border bg-white rounded-2xl mt-8 w-11/12 lg:p-8 p-5">
                         <div class="w-full">
@@ -112,11 +112,11 @@
                                 Every contribution counts towards making a real difference. Please consider donating
                                 today to assist those in urgent need.
                             </p>
-                            <input type="text" placeholder="Write Donation Amount"
+                            <input id="input-second"  type="text" placeholder="Write Donation Amount"
                                 class="input w-full mb-4 rounded-xl border border-gray-400" />
                             <!-- Open the modal using ID.showModal() method -->
-                            <button class="btn btn-success bg-[#B4F461] hover:bg-green-400 border-0 w-full text-lg"
-                                onclick="my_modal_53.showModal()">Donate Now</button>
+                            <button id="donate-two"  class="btn btn-success bg-[#B4F461] hover:bg-green-400 border-0 w-full text-lg"
+                                >Donate Now</button>
                             <dialog id="my_modal_53" class="modal modal-bottom sm:modal-middle">
                                 <div class="modal-box">
                                     <h3 class="text-4xl font-bold text-center">Congrats!</h3>
@@ -137,7 +137,7 @@
 
                 <!-- third -->
 
-                <div class="hero bg-base-200">
+                <div class="hero">
                     <div
                         class="hero-content flex-col lg:flex-row gap-8 border bg-white rounded-2xl my-8 w-11/12 lg:p-8 p-5">
                         <div class="w-full">
@@ -158,10 +158,10 @@
                                 aiding in their recovery. Please consider making a donation to support these brave
                                 individuals in their time of need.
                             </p>
-                            <input type="text" placeholder="Write Donation Amount"
+                            <input id="input-third" type="text" placeholder="Write Donation Amount"
                                 class="input w-full mb-4 rounded-xl border border-gray-400 " />
                             <!-- Open the modal using ID.showModal() method -->
-                            <button class="btn btn-success bg-[#B4F461] hover:bg-green-400 border-0 w-full text-lg" onclick="my_modal_5.showModal()">Donate Now</button>
+                            <button id="donate-three" class="btn btn-success bg-[#B4F461] hover:bg-green-400 border-0 w-full text-lg" ">Donate Now</button>
                             <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                                 <div class="modal-box">
                                     <h3 class="text-4xl font-bold text-center">Congrats!</h3>
@@ -183,36 +183,37 @@
             </div>
 
             <div id="history" class="max-w-screen-lg mx-auto pt-44 space-y-2 hidden">
-
+                
             </div>
 
-            <div id="blog" class="max-w-screen-lg mx-auto pt-44 space-y-2 hidden">
-                <div class="collapse collapse-arrow bg-base-200">
+            <div id="blog" class="max-w-screen-lg lg:mx-auto pt-44 space-y-2 hidden mx-5">
+                <h1 class="lg:text-4xl font-bold text-3xl lg:my-8 my-5">Important FAQ <img class="inline relative bottom-5" src="icons8-faq.gif" alt=""> </h1>
+                <div class="collapse collapse-arrow bg-base-200 p-2">
                     <input type="radio" name="my-accordion-2" checked="checked" />
-                    <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                    <div class="collapse-title text-lg font-medium">What is the Document Object Model(DOM)?</div>
                     <div class="collapse-content">
-                        <p>hello</p>
+                        <p>The Document Object Model (DOM) is a structured representation of a webpage that allows JavaScript to interact with and manipulate HTML and CSS content dynamically.</p>
                     </div>
                 </div>
-                <div class="collapse collapse-arrow bg-base-200">
+                <div class="collapse collapse-arrow bg-base-200 p-2">
                     <input type="radio" name="my-accordion-2" />
-                    <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                    <div class="collapse-title text-lg font-medium">How do you select an element from the DOM?</div>
                     <div class="collapse-content">
-                        <p>hello</p>
+                        <p>We can select an element from the DOM in various ways. Example: getElementById('id') to select by ID, or querySelector('id/class') to select by CSS selector.</p>
                     </div>
                 </div>
-                <div class="collapse collapse-arrow bg-base-200">
+                <div class="collapse collapse-arrow bg-base-200 p-2">
                     <input type="radio" name="my-accordion-2" />
-                    <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                    <div class="collapse-title text-lg font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
                     <div class="collapse-content">
-                        <p>hello</p>
+                        <p>Event delegation is when you use one event listener on a parent element to handle events for its child elements, which helps save time and memory.</p>
                     </div>
                 </div>
-                <div class="collapse collapse-arrow bg-base-200">
+                <div class="collapse collapse-arrow bg-base-200 p-2">
                     <input type="radio" name="my-accordion-2" />
-                    <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                    <div class="collapse-title text-lg font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
                     <div class="collapse-content">
-                        <p>hello</p>
+                        <p>To change an element's attributes and styles, select it and use setAttribute() for attributes and style.property = 'value' for styles.</p>
                     </div>
                 </div>
             </div>
